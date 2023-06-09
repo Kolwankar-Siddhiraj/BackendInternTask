@@ -8,6 +8,15 @@ Step 03: First make sure you have python installed in your system. Then open ter
 
 Step 04: To run this project run command "python manage.py runserver".
 
-Step 05: Open browser and copy paste the link "http://127.0.0.1:8000/api/task/get/all?page=1"
+Step 05: In your VS Code install a extension "Thunder Client".
+
+![image](https://github.com/Kolwankar-Siddhiraj/BackendInternTask/assets/88200767/1fff7637-8489-441e-ab57-d794ebeba520)
+
+Step 06: Open Thunder Client extension and click on 3 lines >> click on Import and import the collection provided in this repo.
+
+![image](https://github.com/Kolwankar-Siddhiraj/BackendInternTask/assets/88200767/c48e94fd-f0e7-4015-87e1-83fa106e06fa)
+
+Step 07: In Body >> Json give data yo want to give and click on send.
 
 
+If there is any issue please contact me at connect.siddhiraj@gmail.com
