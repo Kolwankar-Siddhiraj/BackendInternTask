@@ -2,7 +2,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
 from django.db import transaction
-
+from django.core.paginator import Paginator
 from datetime import datetime
 from taskapp.models import Task
 from taskapp.serializer import TaskSerializer
@@ -30,12 +30,15 @@ class TaskView(APIView):
     def get(self, request, tid):
 
         try:
-            custom_filter = request.query_params.get('filter', None)
             data = None
             if tid == "all":
+                page_number = request.GET.get('page')
+
                 task_obj = Task.objects.filter().order_by('id')
-                task_obj = task_obj.order_by('due_date') if custom_filter is not None else task_obj
-                data = TaskSerializer(task_obj, many=True).data
+                paginator = Paginator(task_obj, per_page=5)
+                page_obj = paginator.get_page(page_number)
+
+                data = TaskSerializer(page_obj, many=True).data
 
             else:
                 task_obj = Task.objects.filter(id=tid).first()
