@@ -18,6 +18,8 @@ Step 06: Open Thunder Client extension and click on 3 lines >> click on Import a
 
 Step 07: In Body >> Json give data whatever you want to give and click on send.
 
+Watch following video to understand how to test api.
+
 https://github.com/Kolwankar-Siddhiraj/BackendInternTask/assets/88200767/7b566efd-8c2a-4b91-8419-2938673efe2b
 
 
